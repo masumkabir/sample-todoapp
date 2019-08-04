@@ -6,3 +6,5 @@ backend/.idea
 frontend/.idea/*
 backend/build/*
 backend/build
+.idea/*
+
