@@ -1,0 +1,254 @@
+{
+  "groups": [
+    {
+      "name": "application",
+      "type": "com.operr.config.ApplicationProperties",
+      "sourceType": "com.operr.config.ApplicationProperties"
+    },
+    {
+      "name": "application.cache",
+      "type": "com.operr.config.ApplicationProperties$Cache",
+      "sourceType": "com.operr.config.ApplicationProperties",
+      "sourceMethod": "getCache()"
+    },
+    {
+      "name": "application.cache.ehcache",
+      "type": "com.operr.config.ApplicationProperties$Cache$Ehcache",
+      "sourceType": "com.operr.config.ApplicationProperties$Cache",
+      "sourceMethod": "getEhcache()"
+    },
+    {
+      "name": "application.client-app",
+      "type": "com.operr.config.ApplicationProperties$ClientApp",
+      "sourceType": "com.operr.config.ApplicationProperties",
+      "sourceMethod": "getClientApp()"
+    },
+    {
+      "name": "application.cors",
+      "type": "com.operr.config.ApplicationProperties$Cors",
+      "sourceType": "com.operr.config.ApplicationProperties",
+      "sourceMethod": "getCors()"
+    },
+    {
+      "name": "application.http",
+      "type": "com.operr.config.ApplicationProperties$Http",
+      "sourceType": "com.operr.config.ApplicationProperties",
+      "sourceMethod": "getHttp()"
+    },
+    {
+      "name": "application.http.cache",
+      "type": "com.operr.config.ApplicationProperties$Http$Cache",
+      "sourceType": "com.operr.config.ApplicationProperties$Http",
+      "sourceMethod": "getCache()"
+    },
+    {
+      "name": "application.logging",
+      "type": "com.operr.config.ApplicationProperties$Logging",
+      "sourceType": "com.operr.config.ApplicationProperties",
+      "sourceMethod": "getLogging()"
+    },
+    {
+      "name": "application.logging.logstash",
+      "type": "com.operr.config.ApplicationProperties$Logging$Logstash",
+      "sourceType": "com.operr.config.ApplicationProperties$Logging",
+      "sourceMethod": "getLogstash()"
+    },
+    {
+      "name": "application.mail",
+      "type": "com.operr.config.ApplicationProperties$Mail",
+      "sourceType": "com.operr.config.ApplicationProperties",
+      "sourceMethod": "getMail()"
+    },
+    {
+      "name": "application.metrics",
+      "type": "com.operr.config.ApplicationProperties$Metrics",
+      "sourceType": "com.operr.config.ApplicationProperties",
+      "sourceMethod": "getMetrics()"
+    },
+    {
+      "name": "application.metrics.logs",
+      "type": "com.operr.config.ApplicationProperties$Metrics$Logs",
+      "sourceType": "com.operr.config.ApplicationProperties$Metrics",
+      "sourceMethod": "getLogs()"
+    },
+    {
+      "name": "application.security",
+      "type": "com.operr.config.ApplicationProperties$Security",
+      "sourceType": "com.operr.config.ApplicationProperties",
+      "sourceMethod": "getSecurity()"
+    },
+    {
+      "name": "application.security.authentication",
+      "type": "com.operr.config.ApplicationProperties$Security$Authentication",
+      "sourceType": "com.operr.config.ApplicationProperties$Security",
+      "sourceMethod": "getAuthentication()"
+    },
+    {
+      "name": "application.security.authentication.jwt",
+      "type": "com.operr.config.ApplicationProperties$Security$Authentication$Jwt",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$Authentication",
+      "sourceMethod": "getJwt()"
+    },
+    {
+      "name": "application.security.client-authorization",
+      "type": "com.operr.config.ApplicationProperties$Security$ClientAuthorization",
+      "sourceType": "com.operr.config.ApplicationProperties$Security",
+      "sourceMethod": "getClientAuthorization()"
+    },
+    {
+      "name": "application.security.remember-me",
+      "type": "com.operr.config.ApplicationProperties$Security$RememberMe",
+      "sourceType": "com.operr.config.ApplicationProperties$Security",
+      "sourceMethod": "getRememberMe()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "application.cache.ehcache.max-entries",
+      "type": "java.lang.Long",
+      "sourceType": "com.operr.config.ApplicationProperties$Cache$Ehcache",
+      "defaultValue": 100
+    },
+    {
+      "name": "application.cache.ehcache.time-to-live-seconds",
+      "type": "java.lang.Integer",
+      "sourceType": "com.operr.config.ApplicationProperties$Cache$Ehcache",
+      "defaultValue": 3600
+    },
+    {
+      "name": "application.client-app.name",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$ClientApp"
+    },
+    {
+      "name": "application.cors.allow-credentials",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.operr.config.ApplicationProperties$Cors",
+      "defaultValue": false
+    },
+    {
+      "name": "application.cors.allowed-headers",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Cors"
+    },
+    {
+      "name": "application.cors.allowed-methods",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Cors"
+    },
+    {
+      "name": "application.cors.allowed-origins",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Cors"
+    },
+    {
+      "name": "application.cors.exposed-headers",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Cors"
+    },
+    {
+      "name": "application.cors.max-age",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Cors"
+    },
+    {
+      "name": "application.http.cache.time-to-live-in-days",
+      "type": "java.lang.Integer",
+      "sourceType": "com.operr.config.ApplicationProperties$Http$Cache",
+      "defaultValue": 0
+    },
+    {
+      "name": "application.logging.logstash.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.operr.config.ApplicationProperties$Logging$Logstash"
+    },
+    {
+      "name": "application.logging.logstash.host",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Logging$Logstash"
+    },
+    {
+      "name": "application.logging.logstash.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.operr.config.ApplicationProperties$Logging$Logstash"
+    },
+    {
+      "name": "application.logging.logstash.queue-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.operr.config.ApplicationProperties$Logging$Logstash"
+    },
+    {
+      "name": "application.logging.use-json-format",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.operr.config.ApplicationProperties$Logging"
+    },
+    {
+      "name": "application.mail.base-url",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Mail"
+    },
+    {
+      "name": "application.mail.from",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Mail"
+    },
+    {
+      "name": "application.metrics.logs.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.operr.config.ApplicationProperties$Metrics$Logs"
+    },
+    {
+      "name": "application.metrics.logs.report-frequency",
+      "type": "java.lang.Long",
+      "sourceType": "com.operr.config.ApplicationProperties$Metrics$Logs"
+    },
+    {
+      "name": "application.security.authentication.jwt.base64-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$Authentication$Jwt"
+    },
+    {
+      "name": "application.security.authentication.jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$Authentication$Jwt"
+    },
+    {
+      "name": "application.security.authentication.jwt.token-validity-in-seconds",
+      "type": "java.lang.Long",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$Authentication$Jwt",
+      "defaultValue": 0
+    },
+    {
+      "name": "application.security.authentication.jwt.token-validity-in-seconds-for-remember-me",
+      "type": "java.lang.Long",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$Authentication$Jwt",
+      "defaultValue": 0
+    },
+    {
+      "name": "application.security.client-authorization.access-token-uri",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$ClientAuthorization"
+    },
+    {
+      "name": "application.security.client-authorization.client-id",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$ClientAuthorization"
+    },
+    {
+      "name": "application.security.client-authorization.client-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$ClientAuthorization"
+    },
+    {
+      "name": "application.security.client-authorization.token-service-id",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$ClientAuthorization"
+    },
+    {
+      "name": "application.security.remember-me.key",
+      "type": "java.lang.String",
+      "sourceType": "com.operr.config.ApplicationProperties$Security$RememberMe"
+    }
+  ],
+  "hints": []
+}

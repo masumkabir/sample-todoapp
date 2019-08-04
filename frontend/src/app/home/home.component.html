@@ -1,0 +1,27 @@
+<h1>Hi {{currentUser.firstName}}!</h1>
+
+<h3>All registered todos:</h3>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">id</th>
+    <th scope="col">Title</th>
+    <th scope="col">Description</th>
+    <th scope="col">Event Time</th>
+    <th scope="col">Update</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let todo of todos">
+    <th scope="row">{{todo.id}}</th>
+    <td>{{todo.title}}</td>
+    <td>{{todo.description}}</td>
+    <td>{{todo.event_time}}</td>
+    <td><button (click)="updateTodo(todo)">Update</button></td>
+    <td><button (click)="deleteTodo(todo.id)"> Delete</button></td>
+  </tr>
+  </tbody>
+</table>
+<p><a [routerLink]="['/add-todo']">Add Todo</a></p>
+<p><a [routerLink]="['/login']">Logout</a></p>

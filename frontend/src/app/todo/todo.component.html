@@ -1,0 +1,34 @@
+<h2>Add Todo</h2>
+<form [formGroup]="createTodoForm">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" id="title" formControlName="title" class="form-control"
+           [ngClass]="{ 'is-invalid': submitted && f.title.errors }"/>
+    <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+      <div *ngIf="f.title.errors.required">Title is required</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" id="description" formControlName="description" class="form-control"
+           [ngClass]="{ 'is-invalid': submitted && f.description.errors }"/>
+    <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+      <div *ngIf="f.description.errors.required">Description is required</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="event_time">Event At</label>
+    <input type="text" id="event_time" formControlName="event_time" class="form-control"
+           [ngClass]="{ 'is-invalid': submitted && f.event_time.errors }"/>
+    <div *ngIf="submitted && f.event_time.errors" class="invalid-feedback">
+      <div *ngIf="f.event_time.errors.required">Event time is required</div>
+    </div>
+  </div>
+  <input type="hidden" formControlName="id" *ngIf="isUpdating" class="form-control" value="{{updatingTodo.id}}}"/>
+  <div class="form-group">
+    <button *ngIf="!isUpdating" [disabled]="loading" (click)="onAdd()" class="btn btn-primary">Add</button>
+    <button [disabled]="loading" *ngIf="isUpdating" (click)="onUpdate()" class="btn btn-primary">Update</button>
+    <a [routerLink]="['/']" class="btn btn-link">Home</a>
+    <a [routerLink]="['/login']">Logout</a>
+  </div>
+</form>
