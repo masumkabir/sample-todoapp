@@ -14,6 +14,8 @@ To start your application in the dev profile, simply run:
 
     cd backend
     ./gradlew -Pdev clean bootRun
+    
+Server will run in 8080 port.
 
 
 ### Building for production
@@ -55,6 +57,12 @@ To start your application in the dev environment mode, simply run:
 
     cd frontend
     npm install & ng serve
+    
+Go to http://localhost:4200/login.
+
+Provide "admin/admin" as default user name and password to login.
+
+You can register your own user by clicking register link.  
 
 ### Building for production
     ng build --prod --build-optimizer --aot --base-href=/
